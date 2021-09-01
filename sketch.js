@@ -42,7 +42,7 @@ function setup() {
   treeObj = new tree(1050, 580);
   groundObject = new ground(width / 2, 600, width, 20);
   //create launcherObject here
-  launcherObject = new launcher(stoneObj.body, { x: 235, y: 420 });
+  launcherObject = new Slingshot(stoneObj.body, { x: 235, y: 420 });
 
   Engine.run(engine);
 }
@@ -96,7 +96,7 @@ function mouseDragged() {
 
 //create mouseReleased function here
 function mouseReleased() {
-  launcher.fly();
+  Slingshot.fly();
 }
 
 //create keyPressed function here
